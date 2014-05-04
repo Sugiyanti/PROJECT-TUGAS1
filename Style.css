@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<b:include data='blog' name='all-head-content'/>
+<title><data:blog.pageTitle/></title>
+<b:skin><![CDATA[
+/* Inti dari Element */
+#wrapper{
+width: 800px; /* lebar blog secara keseluruhan */
+margin: auto; /* untuk membuat "CENTER" blog pada Browser */
+}
+.bagian-kepala{
+height: 200px;
+}
+.bagian-post{
+float: left; /* Gunakan untuk memposisikan Widget di kiri */
+width: 500px;
+}
+.bagian-widget{
+float: right; /* Gunakan untuk memposisikan Widget di Kanan */
+width: 200px;
+}
+/* Body atau background tag */
+body{
+background: #888;
+color: #eee;
+font: 12px calibri;
+}
+/* Link atau tautan */a{ color: orange; }
+a:hover{ color: red; }
+a:visited{ color: gray; }
+a:active{ color:transparent; }
+/* Penanggalan pada Posting */
+.date-header{ color: orange; }
+/* Element Posting */
+.date-outer{ border: 1px solid gray; margin: 10px 5px; } /* pembungkus posting */
+.post-title{ font: 17px calibri; } /* judul entri */
+/* Komentar */
+#comments { background : #454545; color : white; } /* Pembungkus kotak Komentar */
+]]></b:skin>
+</head>
+<body>
+<div id='wrapper'>
+<!-- Nantinya akan dijadikan Judul blog -->
+<div class='bagian-kepala'>
+<b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
+<b:widget id='Header1' locked='true' title='My Blog (Header)' type='Header'/>
+</b:section>
+</div>
+<!-- Tempat dimana posting anda akan muncul -->
+<div class='bagian-post'>
+<b:section class='main' id='main' showaddelement='no'>
+<b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'/>
+</b:section>
+</div>
+<!-- Tempat dimana Widget anda berada -->
+<div class='bagian-widget'>
+<b:section class='sidebar' id='sidebar' preferred='yes'>
+<b:widget id='Followers1' locked='false' title='Followers' type='Followers'/>
+<b:widget id='BlogArchive1' locked='false' title='Blog Archive' type='BlogArchive'/>
+<b:widget id='Profile1' locked='false' title='About Me' type='Profile'/>
+</b:section>
+</div>
+</div>
+<div style='clear:both'>
+<!-- BAGIAN BAWAH DARI INTI POST DAN WIDGET -->
+<!-- tambahkan elemen footer disini -->
+<!-- anda juga harus membuat element DIV terlebih dahulu -->
+</body>
+<!-- end of Bagian badan -->
+</html>
